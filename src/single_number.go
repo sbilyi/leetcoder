@@ -26,7 +26,7 @@ func singleNumber(nums []int) int {
 		for i := 0; i < len(nums); i++ {
 			sum += nums[i]
 			if val, ok := found[nums[i]]; ok {
-				sum -= val*2
+				sum -= val * 2
 				delete(found, val)
 			} else {
 				found[nums[i]] = nums[i]
@@ -34,6 +34,6 @@ func singleNumber(nums []int) int {
 		}
 		return sum
 	}
-	
+
 	return -1
 }
